@@ -1,16 +1,16 @@
 import React from 'react';
+import {actionTypes} from "../../Reducers/useReducer/reducer.js";
 
 function ConfirmDelete({name, dispatch}) {
     function onDelete() {
     return dispatch({
-        type: 'DELETE'
+        type: actionTypes.delete
     })
     }
 
     function onRollback() {
-        // setConfirmed(false)
         return dispatch({
-            type: 'RESET'
+            type: actionTypes.reset
         })
     }
 

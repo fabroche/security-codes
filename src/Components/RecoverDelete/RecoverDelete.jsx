@@ -1,11 +1,10 @@
 import React from 'react';
+import {actionTypes} from "../../Reducers/useReducer/reducer.js";
 
 function RecoverDelete({name, dispatch}) {
     function onUndoDelete() {
-        // setConfirmed(false);
-        // setDeleted(false);
         dispatch({
-            type: 'RESET'
+            type: actionTypes.reset
         })
     }
 

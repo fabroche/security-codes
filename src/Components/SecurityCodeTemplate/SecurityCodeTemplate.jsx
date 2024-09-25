@@ -1,17 +1,19 @@
 import React from 'react';
 import './SecurityCodeTemplate.css'
 
+import {actionTypes} from "../../Reducers/useReducer/reducer.js";
+
 function SecurityCodeTemplate({name, state, dispatch}) {
     function onCheck() {
         return dispatch({
-            type: 'CHECK'
+            type: actionTypes.check
         })
     }
 
     function handleOnChange(e) {
         // setInputValue(e.target.value)
         return dispatch({
-            type: 'WRITE',
+            type: actionTypes.write,
             payload: e.target.value
         })
     }

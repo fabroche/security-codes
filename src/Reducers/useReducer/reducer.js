@@ -6,35 +6,43 @@ export const initialState = {
     confirmed: false
 };
 
+export const actionTypes = {
+    error: 'ERROR',
+    confirm: 'CONFIRM',
+    check: 'CHECK',
+    delete: 'DELETE',
+    reset: 'RESET',
+    write: 'WRITE',
+}
 
 const reducerObject = (state, payload) => ({
-    ERROR: {
+    [actionTypes.error]: {
         ...state,
         error: true,
         loading: false
     },
-    CONFIRM: {
+    [actionTypes.confirm]: {
         ...state,
         error: false,
         loading: false,
         confirmed: true
     },
-    CHECK: {
+    [actionTypes.check]: {
         ...state,
         loading: true
     },
-    DELETE: {
+    [actionTypes.delete]: {
         ...state,
         deleted: true,
         confirmed: false
     },
-    RESET: {
+    [actionTypes.reset]: {
         ...state,
         confirmed: false,
         deleted: false,
         inputValue: ''
     },
-    WRITE: {
+    [actionTypes.write]: {
         ...state,
         inputValue: payload
     }

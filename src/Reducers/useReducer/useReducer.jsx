@@ -1,5 +1,5 @@
 import React, {useEffect, useReducer} from 'react';
-import {initialState, reducer} from "./reducer.js";
+import {initialState, actionTypes, reducer} from "./reducer.js";
 
 
 const SECURITY_CODE = 'paradigma'
@@ -12,13 +12,13 @@ function UseReducer(props) {
 
     function onConfirm() {
         dispatch({
-            type: 'CONFIRM'
+            type: actionTypes.confirm
         })
     }
 
     function onError() {
         dispatch({
-            type: 'ERROR'
+            type: actionTypes.error
         })
     }
 
