@@ -22,6 +22,7 @@ function SecurityCodeTemplate({name, state, dispatch}) {
         <div className="securityCodeTemplate flex-center flex-column">
             <h2>Eliminar {name}</h2>
             <p>Por favor, escribe el código de seguridad.</p>
+            <p>El código de prueba es: <b>paradigma</b></p>
 
             <div className="flex-center flex-wrap">
                 <input
